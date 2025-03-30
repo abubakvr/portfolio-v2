@@ -60,7 +60,7 @@ const App = () => {
 
     const particlesMaterial = new THREE.PointsMaterial({
       size: 0.01,
-      color: 0xff3333,
+      color: 0x8a2be2,
       transparent: true,
       opacity: 0.7,
       blending: THREE.AdditiveBlending,
@@ -73,20 +73,20 @@ const App = () => {
     scene.add(particlesMesh);
 
     // Create a torus knot (representing blockchain complexity)
-    const torusGeometry = new THREE.TorusKnotGeometry(5, 1, 200, 32);
-    const torusMaterial = new THREE.MeshPhongMaterial({
-      color: 0xaa0000,
-      emissive: 0x440000,
-      specular: 0xffffff,
-      shininess: 50,
-      wireframe: true,
-      transparent: true,
-      opacity: 0.6,
-    });
+    // const torusGeometry = new THREE.TorusKnotGeometry(5, 1, 200, 32);
+    // const torusMaterial = new THREE.MeshPhongMaterial({
+    //   color: 0x000000,
+    //   emissive: 0x300046,
+    //   specular: 0xffffff,
+    //   shininess: 50,
+    //   wireframe: true,
+    //   transparent: true,
+    //   opacity: 0.6,
+    // });
 
-    const torusMesh = new THREE.Mesh(torusGeometry, torusMaterial);
-    torusMesh.position.set(-3, 1, -2);
-    scene.add(torusMesh);
+    // const torusMesh = new THREE.Mesh(torusGeometry, torusMaterial);
+    // torusMesh.position.set(-3, 1, -2);
+    // scene.add(torusMesh);
 
     // Controls
     const controls = new OrbitControls(camera, renderer.domElement);
@@ -96,13 +96,13 @@ const App = () => {
     controls.autoRotate = true;
     controls.autoRotateSpeed = 0.5;
 
-    gsap.to(torusMesh.rotation, {
-      y: Math.PI * 2,
-      x: Math.PI * 2,
-      duration: 15,
-      repeat: -1,
-      ease: "none",
-    });
+    // gsap.to(torusMesh.rotation, {
+    //   y: Math.PI * 2,
+    //   x: Math.PI * 2,
+    //   duration: 15,
+    //   repeat: -1,
+    //   ease: "none",
+    // });
 
     // Animation for section transitions
     const menuItems = document.querySelectorAll(".nav-item");
@@ -258,11 +258,11 @@ const App = () => {
 
       // Dispose resources
       scene.remove(particlesMesh);
-      scene.remove(torusMesh);
+      // scene.remove(torusMesh);
       particlesGeometry.dispose();
       particlesMaterial.dispose();
-      torusGeometry.dispose();
-      torusMaterial.dispose();
+      // torusGeometry.dispose();
+      // torusMaterial.dispose();
       renderer.dispose();
     };
   }, []);
@@ -272,7 +272,7 @@ const App = () => {
       <canvas ref={canvasRef} className="webgl-canvas"></canvas>
 
       <nav className="navbar">
-        <img src="/images/logo.png" alt="Logo" className="logo" />
+        <p className="logo">Abubakar</p>
         <div className="nav-links">
           <div
             className={`nav-item ${activeSection === "home" ? "active" : ""}`}
