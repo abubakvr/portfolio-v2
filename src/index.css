@@ -93,6 +93,10 @@ body::before {
   background: var(--gradient-dark);
 }
 
+.logo {
+  width: 40px;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -151,7 +155,7 @@ body::before {
 
 /* Header Section */
 .header {
-  height: 100vh;
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -480,6 +484,7 @@ textarea.form-control {
 @media (max-width: 768px) {
   .nav-links {
     gap: 1rem;
+    display: hidden;
   }
   
   .header-content h1 {
@@ -513,18 +518,35 @@ textarea.form-control {
   .nav-links {
     width: 100%;
     justify-content: space-between;
+    display: none;
+  }
+
+  .logo {
+    width: 30px;
   }
   
   .header-content h1 {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
   
   .header-content p {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .cta-button{
     font-size: 1rem;
+    width: 100%;
+    margin-top: 10px ;
+  }
+
+  .hero-buttons {
+    display: inline;
+    gap: 10px
   }
   
   .section {
-    padding: 5rem 1rem 1rem;
+    padding: 3rem 1rem 1rem;
   }
   
   .section h2 {
@@ -795,11 +817,6 @@ textarea.form-control {
   color: var(--highlight-red);
 }
 
-.experience-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 .project-item {
   background: var(--glass-bg);
   padding: 2rem;
@@ -807,32 +824,4 @@ textarea.form-control {
   margin-bottom: 2rem;
   border-left: 3px solid #ff3333;
   backdrop-filter: blur(5px);
-}
-
-.experience-date {
-  color: #ff3333;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.experience-role {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-}
-
-.experience-company {
-  font-size: 1.1rem;
-  opacity: 0.8;
-  margin-bottom: 1rem;
-}
-
-.experience-description ul {
-  list-style-position: inside;
-  padding-left: 1rem;
-}
-
-.experience-description li {
-  margin-bottom: 0.5rem;
-  opacity: 0.8;
 }

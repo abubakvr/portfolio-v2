@@ -225,13 +225,6 @@ const App = () => {
         y: mouseX * 0.1,
         duration: 0.5,
       });
-
-      gsap.to(hexMesh.rotation, {
-        x: hexMesh.rotation.x + mouseY * 0.01,
-        y: hexMesh.rotation.y + mouseX * 0.01,
-        duration: 0.5,
-        ease: "power1.out",
-      });
     };
 
     window.addEventListener("mousemove", onMouseMove);
@@ -279,7 +272,7 @@ const App = () => {
       <canvas ref={canvasRef} className="webgl-canvas"></canvas>
 
       <nav className="navbar">
-        <div className="logo">Abubakar</div>
+        <img src="/images/logo.png" alt="Logo" className="logo" />
         <div className="nav-links">
           <div
             className={`nav-item ${activeSection === "home" ? "active" : ""}`}
