@@ -39,7 +39,7 @@ jobs:
             npm install
             npm run build
             pm2 delete portfolio-v2 || true
-            pm2 start serve --name portfolio-v2 -- -s /home/workspace/portfolio-v2/dist -l 3000
+            pm2 start "npx serve -s dist -l 3002" --name portfolio-v2 --cwd /home/workspace/portfolio-v2
             pm2 save
 
       - name: Update deployment status (success)
