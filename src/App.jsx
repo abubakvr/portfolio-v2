@@ -516,15 +516,15 @@ const App = () => {
           </div>
 
           <div className="project-item">
-            <img src="/images/prague-img.webp" alt="Prague" />
+            <img src="/images/boskify-img.png" alt="Boskify" />
             <div className="project-details">
-              <h3>Prague</h3>
+              <h3>Boskify</h3>
               <p>
                 An automated peer-to-peer (P2P) trading platform designed for
                 merchants
               </p>
               <a
-                href="https://prague.abubakar.life"
+                href="https://boskify.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -665,7 +665,7 @@ const App = () => {
           <p>&copy; 2025 Abubakar Ibrahim. All Rights Reserved.</p>
           <div className="social-links">
             <a
-              href="https://github/com/abubakvr"
+              href="https://github.com/abubakvr"
               target="_blank"
               className="social-link"
             >
